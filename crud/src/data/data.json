@@ -1,10 +1,28 @@
 {
-  "Shirts": [
+  "Products": [
     {
       "id": 0,
-      "name": "",
-      "urlImage": "",
-      "price": 0
+      "name": "Camiseta Akira",
+      "urlImage": "https://github.com/PedroHenriqueSBer/ECommerce/blob/Developer/crud/src/assets/Images/Camisas/Akira.png?raw=true",
+      "price": 87.99
+    },
+    {
+      "id": 1,
+      "name": "Camiseta Chihiro",
+      "urlImage": "https://github.com/PedroHenriqueSBer/ECommerce/blob/Developer/crud/src/assets/Images/Camisas/Chihiro.png?raw=true",
+      "price": 83.99
+    },
+    {
+      "id": 2,
+      "name": "Camiseta Gengar",
+      "urlImage": "https://github.com/PedroHenriqueSBer/ECommerce/blob/Developer/crud/src/assets/Images/Camisas/TheSmilingGhost.png?raw=true",
+      "price": 95.99
+    },
+    {
+      "id": 3,
+      "name": "Camiseta Pikachu",
+      "urlImage": "https://github.com/PedroHenriqueSBer/ECommerce/blob/Developer/crud/src/assets/Images/Camisas/ThunderRat.png?raw=true",
+      "price": 85.99
     }
   ]
 }
