@@ -1,7 +1,7 @@
 
-export const FeaturedItems = () => {
+export const FeaturedItems: () => JSX.Element = () => {
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+    <div className="flex items-center justify-center">
       
     </div>
   )
