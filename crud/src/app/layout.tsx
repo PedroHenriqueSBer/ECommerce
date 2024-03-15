@@ -19,7 +19,7 @@ export default function RootLayout({
     <ShoppingCarContextProvider>
       <ProductProvider>
         <html lang="en" className={inter.className}>
-          <body className="w-screen h-screen min-w-[40rem] bg-slate-100">{children}</body>
+          <body className="h-screen min-w-[40rem] bg-slate-100">{children}</body>
         </html>
       </ProductProvider>
     </ShoppingCarContextProvider>

@@ -27,7 +27,9 @@ export interface IProductContextProps{
 
 export interface ICarProductContextProps{
   productsCar: import('./ViewModel').ICarProductViewModel[]
-  setProductsCar: (value: import('./ViewModel').ICarProductViewModel[]) => void
+  addProductInCar: (id: number, quantity: number) => void
+  removeProductInCar: (id: number, quantity: number) => void
+  deleteProductInCar: (id: number, quantity: number) => void
 }
 
 export interface IProviderContextProps{

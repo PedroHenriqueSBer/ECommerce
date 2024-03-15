@@ -7,7 +7,7 @@ export const ProductCard = ({
   top
 }: ProductCardProps) => {
   return (
-    <Link href={`/product/${item.id}`} className="w-full h-full bg-slate-200 rounded shadow items-center justify-between flex flex-col group">
+    <Link href={`/product/${item.id}`} className="w-full h-full bg-inherit items-center justify-between flex flex-col group">
       <div className="self-start ml-5 mt-2 font-light text-sm"><h1 className="font-bold text-xl text-gray-800">{item.name}</h1> {top && ` #${top} mais vendidas` }</div>
       <Image src={item.urlImage} width={2040} height={2040} className="p-2 hover:p-0" alt="" />
       <div className="self-start ml-5 mb-2">

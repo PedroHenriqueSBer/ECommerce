@@ -13,29 +13,25 @@ export default function Product(){
   const { id } = useParams();
   const { push } = useRouter()
   const { products } = useProducts()
-  const { productsCar, setProductsCar } = useShoppingCart()
+  const { productsCar } = useShoppingCart()
 
   const [selectedProduct,setSelectedProduct] = useState<IProductViewModel | null>(null)
   const [numberOfProducts,setNumberOfProducts] = useState<number>(1)
 
   useEffect(()=>{
     if(typeof id === 'string'){
-      // if(!products.filter(p => p.id === parseInt(id))[0])
-      //   push('/')
+      if(!products.map(p => p.id).includes(parseInt(id)) && products.length > 0)
+        push('/')
       setSelectedProduct(products.filter(p => p.id === parseInt(id))[0])
     }
-  },[id])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[id, products])
 
   const onCart = () => {
     console.log(numberOfProducts)
     if(numberOfProducts < 1 || numberOfProducts > 99)
       return
     if(selectedProduct){
-      setProductsCar([{
-        idItem: selectedProduct.id,
-        quantity: numberOfProducts
-      },...productsCar])
-      push('/')
     }
 
   }
@@ -64,7 +60,9 @@ export default function Product(){
                       <ShoppingCart />
                       Adicionar no carrinho
                     </Button>
-                    <input type="number" className='w-[4rem] px-[0.3rem] text-lg font-semibold' min={1} max={99} maxLength={2} defaultValue={numberOfProducts} onChange={({target: {value}})=>{ setNumberOfProducts(parseInt(value))}} />
+                    <div className='w-[20%]'>
+                      <input type="number" className='' />
+                    </div>
                   </div>
                 </div>
               </div>

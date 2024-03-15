@@ -6,20 +6,27 @@ import { useProducts } from "@/context/useProduct"
 export const FeaturedItems: () => JSX.Element = () => {
   const { featured } = useProducts()
   return (
-    <div className="flex items-center justify-center">
-      {featured.length > 0 &&
-        <div className="w-[55rem] gap-4 mt-[2rem] grid grid-cols-3">
-          <div className="col-span-2 row-span-2 w-full h-full">
-            <ProductCard item={featured[0]} top={1} />
+      <>
+        {featured.length > 0 &&
+          <div className="w-full gap-4 grid grid-cols-4">
+            <div className="col-span-2 row-span-2 w-full h-full bg-slate-200  rounded shadow">
+              <ProductCard item={featured[0]} top={1} />
+            </div>
+            <div className="w-full h-full bg-slate-200  rounded shadow">
+              <ProductCard item={featured[1]} top={2} />
+            </div>
+            <div className="w-full h-full bg-slate-200  rounded shadow">
+              <ProductCard item={featured[2]} top={3} />
+            </div>
+            <div className="w-full h-full bg-slate-200  rounded shadow">
+              <ProductCard item={featured[3]} top={4} />
+            </div>
+            <div className="w-full h-full bg-slate-200 rounded shadow">
+              <ProductCard item={featured[4]} top={5} />
+            </div>
           </div>
-          <div className="w-full h-full">
-            <ProductCard item={featured[1]} top={2} />
-          </div>
-          <div className="w-full h-full">
-            <ProductCard item={featured[2]} top={3} />
-          </div>
-        </div>
-      }
-    </div>
+        }
+      </>
+
   )
 }

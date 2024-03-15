@@ -14,7 +14,7 @@ export const ProductProvider = ({ children }:IProviderContextProps) => {
 
   useEffect(()=>{
     setProducts(Products)
-    setFeatured(Products.slice(0,3))
+    setFeatured(Products.slice(0,5))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
