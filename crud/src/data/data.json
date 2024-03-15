@@ -3,24 +3,28 @@
     {
       "id": 0,
       "name": "Camiseta Akira",
+      "description": "Entre no mundo cyberpunk com a icônica camiseta Akira. Inspirada na obra-prima de Katsuhiro Otomo, esta camiseta traz elementos futuristas, atmosfera urbana e um toque de rebeldia. Com cores vibrantes e o emblemático logo de Akira, esta peça é perfeita para os fãs de anime e amantes da cultura pop japonesa.",
       "urlImage": "https://github.com/PedroHenriqueSBer/ECommerce/blob/Developer/crud/src/assets/Images/Camisas/Akira.png?raw=true",
       "price": 87.99
     },
     {
       "id": 1,
       "name": "Camiseta Chihiro",
+      "description": "Deixe-se levar pela magia de \"A Viagem de Chihiro\" com esta encantadora camiseta. Inspirada no clássico filme de animação do Studio Ghibli, esta peça transporta você para o mundo mágico e imaginativo criado por Hayao Miyazaki. Com um design delicado e nostálgico, esta camiseta é uma homenagem à coragem e à jornada de autodescoberta de Chihiro.",
       "urlImage": "https://github.com/PedroHenriqueSBer/ECommerce/blob/Developer/crud/src/assets/Images/Camisas/Chihiro.png?raw=true",
       "price": 83.99
     },
     {
       "id": 2,
       "name": "Camiseta Gengar",
+      "description": "Mostre seu lado sombrio com a camiseta Gengar. Este Pokémon do tipo fantasma é conhecido por sua travessura e suas habilidades misteriosas. Esta camiseta apresenta Gengar em todo o seu esplendor assustador, perfeita para os fãs da franquia Pokémon que apreciam um toque de mistério e diversão.",
       "urlImage": "https://github.com/PedroHenriqueSBer/ECommerce/blob/Developer/crud/src/assets/Images/Camisas/TheSmilingGhost.png?raw=true",
       "price": 95.99
     },
     {
       "id": 3,
       "name": "Camiseta Pikachu",
+      "description": "Ilumine seu dia com a camiseta Pikachu, o adorável ícone da franquia Pokémon. Com sua energia contagiante e sua expressão cativante, Pikachu é amado por pessoas de todas as idades. Esta camiseta celebra a alegria e a amizade que Pikachu representa, tornando-a uma escolha perfeita para os fãs de Pokémon que querem adicionar um toque de fofura ao seu guarda-roupa.",
       "urlImage": "https://github.com/PedroHenriqueSBer/ECommerce/blob/Developer/crud/src/assets/Images/Camisas/ThunderRat.png?raw=true",
       "price": 85.99
     }
