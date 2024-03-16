@@ -7,13 +7,11 @@ import { useEffect, useState } from 'react';
 import Image from "next/image"
 import { Button } from '@/components/Button';
 import { ShoppingCart } from 'lucide-react';
-import { useShoppingCart } from '@/context/useShoppingCar';
 
 export default function Product(){
   const { id } = useParams();
   const { push } = useRouter()
-  const { products } = useProducts()
-  const { productsCar } = useShoppingCart()
+  const { products, addProductInCar, setIsCarOpen } = useProducts()
 
   const [selectedProduct,setSelectedProduct] = useState<IProductViewModel | null>(null)
   const [numberOfProducts,setNumberOfProducts] = useState<number>(1)
@@ -28,10 +26,11 @@ export default function Product(){
   },[id, products])
 
   const onCart = () => {
-    console.log(numberOfProducts)
     if(numberOfProducts < 1 || numberOfProducts > 99)
       return
     if(selectedProduct){
+      addProductInCar(selectedProduct.id, numberOfProducts)
+      setIsCarOpen(true)
     }
 
   }
@@ -40,7 +39,7 @@ export default function Product(){
     <main className='w-full'>
       <NavHeader />
       {selectedProduct &&
-        <div className='w-full h-full flex items-center justify-center mt-[5rem]'>
+        <div className='w-full h-full flex items-center justify-center pt-[10rem]'>
           <div className='grid grid-cols-3 gap-4 w-[60rem]'>
               <div className='flex items-end justify-center row-span-2 col-span-2 p-2 hover:p-0 bg-slate-200 rounded shadow'>
                 <Image src={selectedProduct.urlImage} width={3080} height={3080} alt=''/>
@@ -56,12 +55,14 @@ export default function Product(){
                     <h2 className='font-light'>ou <span className='text-red-600'>R${selectedProduct.price}</span> a vista</h2>
                   </div>
                   <div className='flex gap-2 w-full'>
-                    <Button onClick={onCart}>
-                      <ShoppingCart />
-                      Adicionar no carrinho
-                    </Button>
-                    <div className='w-[20%]'>
-                      <input type="number" className='' />
+                    <div className='w-[80%]'>
+                      <Button onClick={onCart}>
+                        <ShoppingCart />
+                        Adicionar no carrinho
+                      </Button>
+                    </div>
+                    <div className='w-[20%] border-b border-b-slate-800 px-2'>
+                      <input type="number" className='w-full h-full outline-none bg-inherit' maxLength={2} max={99} min={1} defaultValue={1} onChange={({target: {value}})=>setNumberOfProducts(parseInt(value))}/>
                     </div>
                   </div>
                 </div>

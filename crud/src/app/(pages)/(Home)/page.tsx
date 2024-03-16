@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <NavHeader />
-      <div className="flex flex-col items-center px-[20rem] gap-[2rem] py-[2rem]">
+      <div className="flex flex-col items-center px-[20rem] gap-[2rem] py-[2rem] pt-[7rem]">
         <FeaturedItems />
         <DisplayProducts />
       </div>
